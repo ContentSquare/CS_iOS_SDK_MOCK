@@ -10,10 +10,6 @@ let package = Package(
         .library(
             name: "ContentsquareModule",
             targets: ["ContentsquareModuleWrapper"]),
-        .library(
-            name: "ContentsquareErrorAnalysisModule",
-            targets: ["ContentsquareErrorAnalysisModule"]
-        )
     ],
     dependencies: [
         .package(
@@ -37,9 +33,5 @@ let package = Package(
             name: "ContentsquareModule",
             url: "https://github.com/ContentSquare/CS_iOS_SDK_MOCK/releases/download/4.16.0/ContentsquareModuleSwiftPackage.xcframework.zip",
             checksum: "04a61abbe0e51626f3d903668100d1b3c34f21e96c20ff0e680f895cc7fc6b36"),
-        .binaryTarget(
-            name: "ContentsquareErrorAnalysisModule",
-            url: "https://github.com/ContentSquare/CS_iOS_SDK_MOCK/releases/download/4.16.0/ContentsquareErrorAnalysisModuleSwiftPackage.xcframework.zip",
-            checksum: "f29aacc4e035da7a7a401d3c5ce763263fea55e89453987c6e6bbf5e2d5cbe13"),
     ]
 )
