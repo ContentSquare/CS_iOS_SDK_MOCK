@@ -1,4 +1,5 @@
 {
+  "4.18.0" : "https://github.com/ContentSquare/CS_iOS_SDK/releases/download/4.18.0/ContentsquareErrorAnalysisModuleCarthage.xcframework.zip",
   "4.17.0" : "https://github.com/ContentSquare/CS_iOS_SDK/releases/download/4.17.0/ContentsquareErrorAnalysisModuleCarthage.xcframework.zip",
   "4.16.0" : "https://github.com/ContentSquare/CS_iOS_SDK/releases/download/4.16.0/ContentsquareErrorAnalysisModuleCarthage.xcframework.zip"
 }
