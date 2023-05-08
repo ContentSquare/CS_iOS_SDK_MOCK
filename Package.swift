@@ -48,11 +48,11 @@ let package = Package(
         ),
         .binaryTarget(
             name: "ContentsquareModule",
-            url: "https://github.com/ContentSquare/CS_iOS_SDK_MOCK/releases/download/4.21.0/ContentsquareModuleSwiftPackage.xcframework.zip",
-            checksum: "971fad84143237f4569be5392f467651d38199fa28f6197da6e3a308b5bf875a"),
+            url: "https://github.com/ContentSquare/CS_iOS_SDK_MOCK/releases/download/4.22.1/ContentsquareModuleSwiftPackage.xcframework.zip",
+            checksum: "410567ac245879a1c5a80409a043d11e1f9057de363bd7199ebb5e6a471e575b"),
         .binaryTarget(
             name: "ContentsquareErrorAnalysisModule",
-            url: "https://github.com/ContentSquare/CS_iOS_SDK_MOCK/releases/download/4.21.0/ContentsquareErrorAnalysisModuleSwiftPackage.xcframework.zip",
-            checksum: "9affb8f0c0dbb8cbdf18ae573c21cc3aa1e12a73828b2ee3f9f33da8c933acf5"),
+            url: "https://github.com/ContentSquare/CS_iOS_SDK_MOCK/releases/download/4.22.1/ContentsquareErrorAnalysisModuleSwiftPackage.xcframework.zip",
+            checksum: "5b6d651184222f3b973798734fd002622e9feca3bbf1b277f8c8f64fa250e471"),
     ]
 )
