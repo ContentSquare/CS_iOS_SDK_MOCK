@@ -46,7 +46,7 @@ let package = Package(
             ],
             path: "ContentsquareErrorAnalysisModuleWrapper",
             resources: [
-                 .process("**/PrivacyInfo.xcprivacy")
+                 .process("../**/PrivacyInfo.xcprivacy")
             ]
         ),
         .binaryTarget(
