@@ -44,7 +44,10 @@ let package = Package(
                 .target(name: "ContentsquareErrorAnalysisModule"),
                 .product(name: "CrashReporter", package: "PLCrashReporter"),
             ],
-            path: "ContentsquareErrorAnalysisModuleWrapper"
+            path: "ContentsquareErrorAnalysisModuleWrapper",
+            resources: [
+                 .process("PrivacyInfo.xcprivacy")
+            ]
         ),
         .binaryTarget(
             name: "ContentsquareModule",
