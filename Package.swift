@@ -35,7 +35,8 @@ let package = Package(
             ],
             path: "ContentsquareModuleWrapper",
             resources: [
-                .process("ContentsquareBundle.bundle")
+                .process("ContentsquareBundle.bundle"),
+                .copy("PrivacyInfo.xcprivacy")
             ]
         ),
         .target(
@@ -46,16 +47,16 @@ let package = Package(
             ],
             path: "ContentsquareErrorAnalysisModuleWrapper",
             resources: [
-                 .process("PrivacyInfo.xcprivacy")
+                .copy("PrivacyInfo.xcprivacy")
             ]
         ),
         .binaryTarget(
             name: "ContentsquareModule",
-            url: "https://github.com/ContentSquare/CS_iOS_SDK_MOCK/releases/download/4.27.0/ContentsquareModuleSwiftPackage.xcframework.zip",
-            checksum: "efd6f5f5a4992e77efa5ba4f5e3f456db72a31352ef8181581b85f917a5bdb98"),
+            url: "https://github.com/ContentSquare/CS_iOS_SDK_MOCK/releases/download/4.27.1/ContentsquareModuleSwiftPackage.xcframework.zip",
+            checksum: "fedf6c653f3f0e61116ce97d4f3742068f88a586a54a683dc80c52b4a2687d7a"),
         .binaryTarget(
             name: "ContentsquareErrorAnalysisModule",
-            url: "https://github.com/ContentSquare/CS_iOS_SDK_MOCK/releases/download/4.27.0/ContentsquareErrorAnalysisModuleSwiftPackage.xcframework.zip",
-            checksum: "1339104d3326cd2fc4d3b5e08267a80b8f7d7b6ab32969f2b72f96f14fd59bc2"),
+            url: "https://github.com/ContentSquare/CS_iOS_SDK_MOCK/releases/download/4.27.1/ContentsquareErrorAnalysisModuleSwiftPackage.xcframework.zip",
+            checksum: "df8c107204dbce4a111d2e1c5979b403a4126799cf14d908e22dc7b22e50f442"),
     ]
 )
