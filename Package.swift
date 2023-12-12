@@ -10,10 +10,6 @@ let package = Package(
         .library(
             name: "ContentsquareModule",
             targets: ["ContentsquareModuleWrapper"]),
-        .library(
-            name: "ContentsquareErrorAnalysisModule",
-            targets: ["ContentsquareErrorAnalysisModuleWrapper"]
-        )
     ],
     dependencies: [
         .package(
@@ -21,9 +17,9 @@ let package = Package(
             url: "https://github.com/apple/swift-protobuf.git",
             "1.15.0" ..< "2.0.0"),
         .package(
-            name: "PLCrashReporter",
-            url: "https://github.com/microsoft/plcrashreporter.git",
-            "1.11.0" ..< "2.0.0"),
+            name: "CSCrashReporter",
+            url: "https://github.com/ContentSquare/CS_iOS_CrashReporter.git",
+            .exact("0.0.3")),
     ],
     targets: [
         // binaryTarget doesn't support dependency, use a wrapper to fix this.
@@ -31,32 +27,17 @@ let package = Package(
             name: "ContentsquareModuleWrapper",
             dependencies: [
                 .target(name: "ContentsquareModule"),
-                "SwiftProtobuf"
+                "SwiftProtobuf",
+                "CSCrashReporter"
             ],
             path: "ContentsquareModuleWrapper",
             resources: [
-                .process("ContentsquareBundle.bundle"),
-                .copy("PrivacyInfo.xcprivacy")
-            ]
-        ),
-        .target(
-            name: "ContentsquareErrorAnalysisModuleWrapper",
-            dependencies: [
-                .target(name: "ContentsquareErrorAnalysisModule"),
-                .product(name: "CrashReporter", package: "PLCrashReporter"),
-            ],
-            path: "ContentsquareErrorAnalysisModuleWrapper",
-            resources: [
-                .copy("PrivacyInfo.xcprivacy")
+                .process("ContentsquareBundle.bundle")
             ]
         ),
         .binaryTarget(
             name: "ContentsquareModule",
             url: "https://github.com/ContentSquare/CS_iOS_SDK_MOCK/releases/download/4.27.1/ContentsquareModuleSwiftPackage.xcframework.zip",
-            checksum: "fedf6c653f3f0e61116ce97d4f3742068f88a586a54a683dc80c52b4a2687d7a"),
-        .binaryTarget(
-            name: "ContentsquareErrorAnalysisModule",
-            url: "https://github.com/ContentSquare/CS_iOS_SDK_MOCK/releases/download/4.27.1/ContentsquareErrorAnalysisModuleSwiftPackage.xcframework.zip",
-            checksum: "df8c107204dbce4a111d2e1c5979b403a4126799cf14d908e22dc7b22e50f442"),
+            checksum: "acc571cf25d969bb08ba92ecac3290632da9de74dcb0ed7f29e6608c38d677bc"),
     ]
 )
