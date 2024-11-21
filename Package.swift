@@ -13,9 +13,9 @@ let package = Package(
     ],
     dependencies: [
         .package(
-            name: "CSSwiftProtobuf",
-            url: "https://github.com/ContentSquare/CSSwiftProtobuf.git",
-            .exact("1.28.2")),
+            name: "SwiftProtobuf",
+            url: "https://github.com/apple/swift-protobuf.git",
+            "1.15.0" ... "1.26.0"),
         .package(
             name: "CSCrashReporter",
             url: "https://github.com/ContentSquare/CS_iOS_CrashReporter.git",
@@ -27,7 +27,7 @@ let package = Package(
             name: "ContentsquareModuleWrapper",
             dependencies: [
                 .target(name: "ContentsquareModule"),
-                "CSSwiftProtobuf",
+                "SwiftProtobuf",
                 "CSCrashReporter"
             ],
             path: "ContentsquareModuleWrapper",
@@ -38,7 +38,7 @@ let package = Package(
         ),
         .binaryTarget(
             name: "ContentsquareModule",
-            url: "https://github.com/ContentSquare/CS_iOS_SDK_MOCK/releases/download/4.38.0/ContentsquareModuleSwiftPackage.xcframework.zip",
-            checksum: "d13c6bbb3c8ec9236f86350c2c9f0b13b92c248cd095f5eccd39012ee4ef2f15"),
+            url: "https://github.com/ContentSquare/CS_iOS_SDK_MOCK/releases/download/4.38.1/ContentsquareModuleSwiftPackage.xcframework.zip",
+            checksum: "99318ab9eef342401aefe7205f6a88c8be160ccfb45df3f5af08702fac0aa342"),
     ]
 )
