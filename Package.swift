@@ -38,7 +38,7 @@ let package = Package(
         ),
         .binaryTarget(
             name: "ContentsquareModule",
-            url: "https://github.com/ContentSquare/CS_iOS_SDK_MOCK/releases/download/4.45.57/ContentsquareModuleSwiftPackage.xcframework.zip",
-            checksum: "d62af0f107834603f802ce40a2daa9c33823f437c2f26641dfa665dcd7e29dc3"),
+            url: "https://github.com/ContentSquare/CS_iOS_SDK_MOCK/releases/download/4.45.5/ContentsquareModuleSwiftPackage.xcframework.zip",
+            checksum: "b98ac37ae9c3c80b45da89eab783f1c005c35ab49dfe8d547da8c30f5ff79b17"),
     ]
 )
