@@ -1,18 +1,11 @@
-// swift-tools-version:5.9
+// swift-tools-version:5.3
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let package = Package(
     name: "CS_iOS_SDK",
-    platforms: [
-        .iOS(.v13),
-        .macCatalyst(.v13),
-        .macOS(.v11),
-        .tvOS(.v13),
-        .watchOS(.v6),
-        .visionOS(.v1),
-    ],
+    platforms: [.iOS(.v13)],
     products: [
         .library(
             name: "ContentsquareModule",
@@ -34,7 +27,7 @@ let package = Package(
          .package(
              name: "ContentsquareUICore",
              url: "https://github.com/contentsquare/ios-ui-core-sdk.git",
-             .exact("0.1.0")),
+             .exact("0.2.0")),
      ],
      targets: [
          // binaryTarget doesn't support dependency, use a wrapper to fix this.
@@ -49,13 +42,13 @@ let package = Package(
              ],
             path: "ContentsquareModuleWrapper",
             resources: [
-                .copy("ContentsquareBundle.bundle"),
+                .process("ContentsquareBundle.bundle"),
                 .copy("PrivacyInfo.xcprivacy")
             ]
         ),
         .binaryTarget(
             name: "ContentsquareModule",
-            url: "https://github.com/ContentSquare/CS_iOS_SDK_MOCK/releases/download/4.53.0-rc.15/ContentsquareModuleSwiftPackage.xcframework.zip",
-            checksum: "117c990f2d33579dd74ebb84d1517219487b09731212dfc4adff7d45bf57513c"),
+            url: "https://github.com/ContentSquare/CS_iOS_SDK_MOCK/releases/download/4.53.0-rc.16/ContentsquareModuleSwiftPackage.xcframework.zip",
+            checksum: "a3bd955ba79b4b03f777444f4da7e38fe10c3b5fb0f970308b344aeec6187f75"),
     ]
 )
