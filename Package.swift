@@ -30,7 +30,7 @@ let package = Package(
          .package(
              name: "ContentsquareCore",
              url: "https://github.com/ContentSquare/apple-core-sdk.git",
-             .exact("0.2.4")),
+             .exact("0.2.5")),
          .package(
              name: "ContentsquareUICore",
              url: "https://github.com/contentsquare/ios-ui-core-sdk.git",
@@ -55,7 +55,7 @@ let package = Package(
         ),
         .binaryTarget(
             name: "ContentsquareModule",
-            url: "https://github.com/ContentSquare/CS_iOS_SDK_MOCK/releases/download/4.53.2-rc.7/ContentsquareModuleSwiftPackage.xcframework.zip",
-            checksum: "0075194f74b72ba59854e46e4b4e3115895530e104b305be63e19784d0deb8af"),
+            url: "https://github.com/ContentSquare/CS_iOS_SDK_MOCK/releases/download/4.54.0-rc.3/ContentsquareModuleSwiftPackage.xcframework.zip",
+            checksum: "beec7aad683278706d5f12867eb3dc9a017d2878f5ec908135dff6968b4c60d2"),
     ]
 )
